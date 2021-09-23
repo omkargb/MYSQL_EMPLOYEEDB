@@ -1,0 +1,26 @@
+/* Read - display all records */
+CREATE PROCEDURE DisplayAll()
+begin
+select * from employee;
+end
+
+/* calling a stored procedure : CALL DisplayAll(); */
+
+_________________________________________________________________________
+
+/* Update - update age info */
+CREATE PROCEDURE updateAge(in id int, in age int)
+begin
+update employee set age=age where empId=id;
+end
+
+/* calling a stored procedure : CALL updateAge(103,26); */
+_________________________________________________________________________
+
+/* Delete - delete table row by providing id */
+CREATE PROCEDURE deleteRow(in id int)
+begin
+delete from employee where empId=id;
+end
+
+/* calling a stored procedure : CALL deleteRow(103); */
